@@ -42,9 +42,16 @@
         .dot.red { background-color: #ff5f56; }
         .dot.yellow { background-color: #ffbd2e; }
         .dot.green { background-color: #27c93f; }
-        .theme-icon {
-            color: #f59e0b;
-            font-size: 18px;
+        .music-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            opacity: 0.3;
+            transition: opacity 0.3s ease;
+            fill: #1e293b;
+        }
+        .music-icon.playing {
+            opacity: 1;
         }
         .card {
             background-color: #ffffff;
@@ -114,7 +121,9 @@
                 <div class="dot yellow"></div>
                 <div class="dot green"></div>
             </div>
-            <div class="theme-icon">☀️</div>
+            <svg class="music-icon" id="musicBtn" onclick="toggleBGM()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+            </svg>
         </div>
 
         <div class="card profile">
@@ -146,5 +155,41 @@
             </ul>
         </div>
     </div>
+
+    <div id="youtube-player" style="display: none;"></div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        var player;
+        var isPlaying = false;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '0',
+                width: '0',
+                videoId: 'INak4ORss18',
+                playerVars: {
+                    'autoplay': 0,
+                    'controls': 0,
+                    'loop': 1,
+                    'playlist': 'INak4ORss18'
+                }
+            });
+        }
+
+        function toggleBGM() {
+            var btn = document.getElementById('musicBtn');
+            
+            if (!isPlaying) {
+                player.playVideo();
+                isPlaying = true;
+                btn.classList.add('playing');
+            } else {
+                player.pauseVideo();
+                isPlaying = false;
+                btn.classList.remove('playing');
+            }
+        }
+    </script>
 </body>
 </html>
