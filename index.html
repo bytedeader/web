@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Byte 데더</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            border: 1px solid #f1f5f9;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .window-controls {
+            display: flex;
+            gap: 6px;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .dot.red { background-color: #ff5f56; }
+        .dot.yellow { background-color: #ffbd2e; }
+        .dot.green { background-color: #27c93f; }
+        .theme-icon {
+            color: #f59e0b;
+            font-size: 18px;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f1f5f9;
+        }
+        .profile {
+            text-align: center;
+        }
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #e2e8f0;
+            margin: 0 auto 16px;
+            display: block;
+            object-fit: cover;
+            border: 2px solid #f1f5f9;
+        }
+        .profile h1 {
+            font-size: 20px;
+            margin: 0;
+            color: #1e293b;
+        }
+        .section-title {
+            font-size: 18px;
+            margin: 0 0 12px 0;
+            color: #1e293b;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .text-content {
+            color: #475569;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .project-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .project-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px dashed #e2e8f0;
+            font-size: 13px;
+            color: #475569;
+        }
+        .project-item:last-child {
+            border-bottom: none;
+        }
+        .project-info {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="window-controls">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+            </div>
+            <div class="theme-icon">☀️</div>
+        </div>
+
+        <div class="card profile">
+            <img src="https://cdn.discordapp.com/attachments/1470463589037903914/1500842310509007139/IMG_2046.jpg?ex=69f9e7d3&is=69f89653&hm=6f46f12fb1cb884b06f0fbdce38042cf928cfe9c383e4d98c62973f931f05914" alt="Profile" class="profile-img">
+            <h1># 𝐙𝐱 데더</h1>
+        </div>
+
+        <div class="card text-content">
+            <h2 class="section-title" style="border:none; padding:0;">안녕하세요. 데더입니다 :)</h2>
+            <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 12px 0;">
+            학생 개발자 및 Team Byte 주인으로 활동 중입니다.
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">참가 프로젝트/활동</h2>
+            <ul class="project-list">
+                <li class="project-item">
+                    <span class="project-info">2026.05 - 현재 | Team Byte 서비스 (현)</span>
+                </li>
+                <li class="project-item">
+                    <span class="project-info">2026.05 - 현재 | 제로몰-New Zero (현)</span>
+                </li>
+                <li class="project-item">
+                    <span class="project-info">2026.04 - 현재 | 극천팸 (현)</span>
+                </li>
+                <li class="project-item">
+                    <span class="project-info">2025.?? - 2025.?? | 라스트스쿼드 (구)</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
