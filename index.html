@@ -79,6 +79,24 @@
             margin: 0;
             color: #1e293b;
         }
+        
+        /* 추가된 디스코드 친추 버튼 스타일 */
+        .btn-discord {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 20px;
+            background-color: #5865F2; /* 디스코드 공식 블루 */
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+        .btn-discord:hover {
+            background-color: #4752C4;
+        }
+
         .section-title {
             font-size: 18px;
             margin: 0 0 12px 0;
@@ -111,6 +129,25 @@
         .project-info {
             flex-grow: 1;
         }
+        
+        /* 추가된 리스트 내 작은 버튼 스타일 */
+        .btn-small {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: #f1f5f9;
+            color: #475569;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            margin-left: 10px;
+        }
+        .btn-small:hover {
+            background-color: #e2e8f0;
+            color: #1e293b;
+        }
     </style>
 </head>
 <body>
@@ -129,6 +166,8 @@
         <div class="card profile">
             <img src="https://cdn.discordapp.com/attachments/1470463589037903914/1500842310509007139/IMG_2046.jpg?ex=69f9e7d3&is=69f89653&hm=6f46f12fb1cb884b06f0fbdce38042cf928cfe9c383e4d98c62973f931f05914" alt="Profile" class="profile-img">
             <h1># 𝐙𝐱 데더</h1>
+            <!-- 친추하기 버튼 추가됨 -->
+            <a href="https://discord.gg/WB77Vejj" target="_blank" class="btn-discord">친추하기</a>
         </div>
 
         <div class="card text-content">
@@ -142,6 +181,8 @@
             <ul class="project-list">
                 <li class="project-item">
                     <span class="project-info">2026.05 - 현재 | Team Byte 서비스 (현)</span>
+                    <!-- 서버 구경가기 버튼 추가됨 -->
+                    <a href="https://discord.gg/Bm6aGyRjKZ" target="_blank" class="btn-small">서버 구경가기</a>
                 </li>
                 <li class="project-item">
                     <span class="project-info">2026.05 - 현재 | AFN API DEV (현)</span>
